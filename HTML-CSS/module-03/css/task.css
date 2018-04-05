@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 * {
     font-family: Playfair Display, serif;
-    /*    border: 1px solid black; */
+    /*    border: 1px solid black;  */
     padding: 0px;
+    margin: 0px;
 }
 
 .menu-main-item {
@@ -18,6 +19,7 @@
 
 .menu-main {
     color: #00e400;
+    margin-top: 20px;
 }
 
 .menu-main-list {
@@ -35,4 +37,35 @@
 a {
     color: navy;
     text-decoration: none;
+    font-size: 20px;
+}
+
+.article-smoll {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 470px;
+    margin: auto;
+    padding: 25px;
+    border-bottom: 1px solid black;
+}
+
+.rubric {
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.rubric>a {
+    font-family: Calibri, sans-serif;
+    color: gray;
+}
+
+h2 {
+    margin: 20px 0px;
+}
+
+.main-articles {
+    display: flex;
+    width: 980px;
+    margin: auto;
+    justify-content: space-between;
 }
