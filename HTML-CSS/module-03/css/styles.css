@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+* {
+    font-family: 'Playfair Display', serif;
+    padding: 0px;
+    margin: 10px 0px;
+}
+
+.menu-main-item {
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 40px;
+    width: 180px;
+    margin: 10px;
+    border: 1px solid white;
+}
+
+.menu-main-list {
+    margin: auto;
+    width: fit-content;
+}
+
+.menu-main-item:hover {
+    border: 1px solid rgba(128, 128, 128, 0.6);
+    box-shadow: 3px 3px 6px 3px rgba(128, 128, 128, 0.4);
+    font-weight: bold;
+}
+
+a {
+    color: rgba(64, 64, 64, 0.9);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.main-articles {
+    width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.article-smoll {
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: left;
+    width: 470px;
+    margin: 50px 10px;
+    padding: 25px;
+    border: 1px solid white;
+}
+
+.rubric {
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.rubric>a {
+    font-family: Calibri, sans-serif;
+    color: rgba(128, 128, 128, 0.8);
+}
+
+h2 {
+    margin: 20px 0px;
+    font-size: 28px;
+}
+
+.buttons {
+    display: inline-block;
+    text-align: center;
+    line-height: 60px;
+    width: 180px;
+    margin: 10px;
+    border: 1px solid rgba(64, 64, 64, 0.8);
+}
+
+.footer-main {
+    margin: auto;
+    width: fit-content;
+}
+
+.buttons:hover {
+    border: 1px solid rgba(32, 32, 32, 1);
+    box-shadow: 3px 3px 6px 3px rgba(128, 128, 128, 0.4);
+    font-weight: bold;
+}
+
+.article-smoll:hover {
+    border: 1px solid rgba(64, 64, 64, 0.6);
+    box-shadow: 3px 3px 6px 3px rgba(128, 128, 128, 0.4);
+}
