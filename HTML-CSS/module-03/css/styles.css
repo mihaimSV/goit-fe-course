@@ -12,7 +12,7 @@
     line-height: 40px;
     width: 180px;
     margin: 10px;
-    border: 1px solid white;
+    border: 1px solid rgba(192, 192, 192, 0);
 }
 
 .menu-main-list {
@@ -45,7 +45,12 @@ a {
     width: 470px;
     margin: 50px 10px;
     padding: 25px;
-    border: 1px solid white;
+    border: 1px solid rgba(192, 192, 192, 0.0);
+}
+
+.article-smoll:hover {
+    border: 1px solid rgba(128, 128, 128, 0.6);
+    box-shadow: 3px 3px 6px 3px rgba(128, 128, 128, 0.4);
 }
 
 .rubric {
@@ -63,27 +68,22 @@ h2 {
     font-size: 28px;
 }
 
+.footer-main {
+    margin: auto;
+    width: fit-content;
+}
+
 .buttons {
     display: inline-block;
     text-align: center;
     line-height: 60px;
     width: 180px;
     margin: 10px;
-    border: 1px solid rgba(64, 64, 64, 0.8);
-}
-
-.footer-main {
-    margin: auto;
-    width: fit-content;
+    border: 1px solid rgba(128, 128, 128, 0.6);
 }
 
 .buttons:hover {
-    border: 1px solid rgba(32, 32, 32, 1);
+    border: 1px solid rgba(64, 64, 64, 0.8);
     box-shadow: 3px 3px 6px 3px rgba(128, 128, 128, 0.4);
     font-weight: bold;
-}
-
-.article-smoll:hover {
-    border: 1px solid rgba(64, 64, 64, 0.6);
-    box-shadow: 3px 3px 6px 3px rgba(128, 128, 128, 0.4);
 }
