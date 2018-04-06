@@ -2,7 +2,7 @@
 * {
     font-family: 'Playfair Display', serif;
     padding: 0px;
-    margin: 10px 0px;
+    margin-bottom: 20px;
 }
 
 .menu-main-item {
@@ -54,17 +54,13 @@ a {
 }
 
 .rubric {
-    margin-top: 20px;
     text-transform: uppercase;
-}
-
-.rubric>a {
     font-family: Calibri, sans-serif;
     color: rgba(128, 128, 128, 0.8);
+    font-size: 20px;
 }
 
 h2 {
-    margin: 20px 0px;
     font-size: 28px;
 }
 
