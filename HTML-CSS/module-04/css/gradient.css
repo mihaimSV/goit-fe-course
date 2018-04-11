@@ -1,0 +1,41 @@
+main.grad-linear {
+    width: 1200px;
+    height: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 0px;
+    text-align: center;
+    background: linear-gradient(to bottom right, hsl(39, 25%, 90%), hsl(39, 50%, 70%));
+}
+
+div.grad-circle {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    border: none;
+    margin: 100px 100px;
+    padding: 0px;
+    background-image: radial-gradient(circle at 35% 30%, hsl(186, 50%, 90%), hsl(186, 75%, 25%));
+}
+
+div.grad-circle:hover {
+    box-shadow: 6px 6px 12px 6px rgba(0, 0, 0, 0.4);
+    background-image: radial-gradient(circle at 65% 70%, hsl(186, 50%, 90%), hsl(186, 75%, 25%));
+}
+
+div.grad-ellipse {
+    display: inline-block;
+    width: 450px;
+    height: 300px;
+    border-radius: 150px;
+    border: none;
+    margin: 100px 100px;
+    padding: 0px;
+    background-image: radial-gradient(ellipse at 35% 30%, hsl(186, 50%, 90%), hsl(186, 75%, 25%));
+}
+
+div.grad-ellipse:hover {
+    box-shadow: 6px 6px 12px 6px rgba(0, 0, 0, 0.4);
+    background-image: radial-gradient(circle at 65% 70%, hsl(186, 50%, 90%), hsl(186, 75%, 25%));
+}
