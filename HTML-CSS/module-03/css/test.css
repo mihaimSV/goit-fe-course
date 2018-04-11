@@ -1,0 +1,74 @@
+* {
+    /*    border: 1px solid black;  */
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    box-sizing: border-box;
+    background-color: blue;
+    width: 1200px;
+    height: 200px;
+    margin: 0px auto 50px auto;
+    padding: 50px;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: cyan;
+    text-align: center;
+}
+
+main {
+    box-sizing: border-box;
+    width: 1200px;
+    height: 600px;
+    padding: 0px;
+    margin: 0px auto 0px auto;
+    text-align: justify;
+}
+
+article {
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: blue;
+    margin-bottom: 50px;
+    height: 250px;
+    padding: 20px;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: cyan;
+    text-align: center;
+}
+
+.first {
+    width: 500px;
+}
+
+.second {
+    width: 330px;
+}
+
+
+/* "костыль" - вынужден создать последний, невидимый элемент article (inline-block), который в завершающей (третей) строке выровнен влево   */
+
+.end-for-jastify {
+    width: 1000px;
+    height: 0px;
+    border: 0px none transparent;
+    padding: 0px;
+}
+
+footer {
+    box-sizing: border-box;
+    background-color: blue;
+    width: 1200px;
+    height: 200px;
+    margin: 0px auto 0px auto;
+    padding: 50px;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: cyan;
+    text-align: right;
+}
