@@ -25,6 +25,7 @@ main {
     padding: 0px;
     margin: 0px auto 0px auto;
     text-align: justify;
+    text-align-last: justify;
 }
 
 article {
@@ -39,6 +40,7 @@ article {
     font-weight: bold;
     color: cyan;
     text-align: center;
+    text-align-last: center;
 }
 
 .first {
@@ -47,16 +49,6 @@ article {
 
 .second {
     width: 330px;
-}
-
-
-/* "костыль" - вынужден создать последний, невидимый элемент article (inline-block), который в завершающей (третей) строке выровнен влево   */
-
-.end-for-jastify {
-    width: 1000px;
-    height: 0px;
-    border: 0px none transparent;
-    padding: 0px;
 }
 
 footer {
