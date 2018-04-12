@@ -1,0 +1,66 @@
+* {
+    padding: 0px;
+}
+
+
+/*  Задание 1. Горизонтальное меню (float)  */
+
+nav.menu-button {
+    box-sizing: border-box;
+    background: linear-gradient(to top left, hsl(51, 100%, 50%) 0%, hsl(51, 100%, 80%) 100%);
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid darkgoldenrod;
+}
+
+ul.menu-button {
+    display: inline-block;
+    height: 102px;
+    box-sizing: border-box;
+    margin: auto;
+    width: fit-content;
+    vertical-align: middle;
+}
+
+li.menu-button {
+    background: radial-gradient(ellipse at 35% 30%, hsla(51, 50%, 100%, 1), hsla(51, 50%, 40%, 0.8));
+    /* display: inline-block; */
+    float: left;
+    vertical-align: middle;
+    text-transform: uppercase;
+    text-align: center;
+    list-style-type: none;
+    box-sizing: border-box;
+    line-height: 60px;
+    width: 200px;
+    margin: 0px 20px;
+    padding: 0px;
+    border: 1px solid hsla(43, 89%, 38%, 0.6);
+    border-radius: 30px;
+}
+
+li.menu-button:hover {
+    border: 1px solid hsla(43, 89%, 38%, 0.9);
+    background: radial-gradient(ellipse at 65% 70%, hsla(51, 50%, 100%, 1), hsla(51, 50%, 40%, 0.8));
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+li.menu-button>a {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    /*  display: block; */
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+li.menu-button>a:focus {
+    color: darkblue;
+}
+
+ul.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}

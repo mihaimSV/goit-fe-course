@@ -1,0 +1,35 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+    background-color: cyan;
+}
+
+body {
+    background: khaki;
+}
+
+p {
+    font-size: 16px;
+    color: indigo;
+}
+
+.menu-main-item {
+    font-size: 36px;
+}
+
+#winter {
+    width: 30%;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: justify;
+}
+
+div {
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: red;
+}
+
+li {}
