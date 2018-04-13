@@ -16,7 +16,7 @@ nav.menu-button {
 
 ul.menu-button {
     display: inline-block;
-    height: 102px;
+    height: 80%;
     box-sizing: border-box;
     margin: auto;
     width: fit-content;
@@ -37,7 +37,7 @@ li.menu-button {
     margin: 0px 20px;
     padding: 0px;
     border: 1px solid hsla(43, 89%, 38%, 0.6);
-    border-radius: 30px;
+    border-radius: 31px;
 }
 
 li.menu-button:hover {
@@ -63,4 +63,36 @@ ul.clearfix::after {
     content: "";
     display: block;
     clear: both;
+}
+
+
+/* Задание 2. 3 чередующихся фона #88292F, #5DB7DE, #0D5D56. Шрифт #0E1116 */
+
+ul.list {
+    width: 600px;
+    margin: 50Px;
+    border: 1Px solid black;
+    padding: 20px;
+}
+
+li.list {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    list-style-type: decimal;
+    list-style-position: outside;
+    color: #0E1116;
+    padding: 5px 20Px;
+    margin: 5px 30px;
+}
+
+li.list:nth-child(3n+1) {
+    background-color: #88292F;
+}
+
+li.list:nth-child(3n+2) {
+    background-color: #5DB7DE;
+}
+
+li.list:nth-child(3n+3) {
+    background-color: #0D5D56;
 }
