@@ -12,11 +12,11 @@ nav.menu-button {
     margin: 20px;
     padding: 20px;
     border: 1px solid darkgoldenrod;
+    display: flex;
 }
 
 ul.menu-button {
-    display: inline-block;
-    height: 80%;
+    height: 102Px;
     box-sizing: border-box;
     margin: auto;
     width: fit-content;
@@ -25,17 +25,14 @@ ul.menu-button {
 
 li.menu-button {
     background: radial-gradient(ellipse at 35% 30%, hsla(51, 50%, 100%, 1), hsla(51, 50%, 40%, 0.8));
-    /* display: inline-block; */
     float: left;
-    vertical-align: middle;
     text-transform: uppercase;
     text-align: center;
     list-style-type: none;
     box-sizing: border-box;
     line-height: 60px;
     width: 200px;
-    margin: 0px 20px;
-    padding: 0px;
+    margin: 20px;
     border: 1px solid hsla(43, 89%, 38%, 0.6);
     border-radius: 31px;
 }
@@ -49,7 +46,6 @@ li.menu-button:hover {
 
 li.menu-button>a {
     font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-    /*  display: block; */
     color: black;
     text-decoration: none;
     font-size: 24px;
@@ -95,4 +91,77 @@ li.list:nth-child(3n+2) {
 
 li.list:nth-child(3n+3) {
     background-color: #0D5D56;
+}
+
+
+/* Задание 3. C помощью ::before поставить перед каждой ссылкой символ стрелки */
+
+ul.list-arrow {
+    width: 400px;
+    margin: 50Px auto;
+    border: 1Px solid black;
+    padding: 20px;
+}
+
+li.list-arrow {
+    font-family: Tahoma, Verdana, Geneva, sans-serif;
+    font-size: 24px;
+    list-style-type: none;
+    color: darkblue;
+    padding: 5px 20Px;
+    margin: 5px 30px;
+}
+
+li.list-arrow::before {
+    content: "\2192";
+    padding: 20Px;
+    color: darkviolet;
+}
+
+main {
+    border: 1px solid blue;
+    margin: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Задание 4. пронумеровать римскими, квадратом с вертикально и горизонтально центрированым текстом. */
+
+footer {
+    counter-reset: count-item;
+    margin: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+ul.list-counter {
+    width: 400px;
+    margin: 50Px 0px 50px 800px;
+    border: 1Px solid black;
+    padding: 20px;
+}
+
+li.list-counter {
+    counter-increment: count-item;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24px;
+    list-style-type: none;
+    color: darkgreen;
+    padding: 5Px;
+}
+
+li.list-counter::before {
+    display: inline-block;
+    box-sizing: border-box;
+    content: counter(count-item, upper-roman);
+    padding: 10Px;
+    color: forestgreen;
+    width: 52px;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px 5px;
+    background-color: lightgreen;
+    border: 1px solid hsl(120, 100%, 10%);
+    text-align: center;
 }
