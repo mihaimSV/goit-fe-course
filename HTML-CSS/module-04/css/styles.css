@@ -3,7 +3,7 @@
         box-sizing: border-box;
         margin: 0px;
         padding: 0px;
-        /*border: 1px solid black;  */
+        /*  border: 1px solid black;*/
     }
     
     body {
@@ -13,9 +13,7 @@
     }
     
     nav.mmenu {
-        display: flex;
         height: 90px;
-        margin-bottom: 30px;
     }
     
     a.logo {
@@ -67,18 +65,6 @@
         color: rgb(26, 188, 156);
     }
     
-    nav.clearfix {
-        content: "";
-        display: block;
-        clear: both;
-    }
-    
-    nav.clearfix::after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-    
     h2.section {
         display: block;
         font-family: 'Roboto', sans-serif;
@@ -100,8 +86,13 @@
     }
     
     section.shop {
-        display: flex;
-        margin: 30px 0Px;
+        padding: 30Px 0Px;
+    }
+    
+    section.shop::after {
+        content: "";
+        clear: both;
+        display: block;
     }
     
     div.item {
@@ -116,6 +107,12 @@
         background-color: rgb(50, 50, 50);
         height: 40px;
         margin-top: -4px;
+    }
+    
+    div.underline::after {
+        content: "";
+        clear: both;
+        display: block;
     }
     
     div.item:hover {
@@ -151,21 +148,8 @@
         text-align: center;
     }
     
-    div.price::after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-    
-    section.shop::after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-    
     section.blog {
-        display: flex;
-        margin: 30px 15Px;
+        padding: 30Px 0Px;
     }
     
     article.article-smol {
