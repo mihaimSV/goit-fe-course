@@ -3,7 +3,7 @@
         box-sizing: border-box;
         margin: 0px;
         padding: 0px;
-        /*  border: 1px solid black;*/
+        /*        outline: 1px solid black; */
     }
     
     body {
@@ -11,9 +11,16 @@
         margin: auto;
         padding: 0px;
     }
+    /*  Зачистка для контейнеров, содержащих float-элементы. Псевдоэлемент, последний внутри контейнера, определит его высоту.  */
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
     
     nav.mmenu {
-        height: 90px;
+        padding: 30px 0px;
     }
     
     a.logo {
@@ -25,7 +32,7 @@
         line-height: 30Px;
         text-align: left;
         color: rgb(85, 82, 82);
-        margin: 30Px 15Px;
+        margin: 0Px 15Px;
         text-decoration: none;
     }
     
@@ -36,8 +43,7 @@
     
     ul.mmenu {
         float: right;
-        height: 32px;
-        margin: 29Px 0Px;
+        height: 30px;
     }
     
     li.mmenu {
@@ -45,7 +51,7 @@
         list-style-type: none;
         line-height: 30Px;
         padding: 0px 15px;
-        margin: 0Px 5Px;
+        margin-left: 10Px;
     }
     
     li.mmenu:hover {
@@ -61,7 +67,7 @@
         text-decoration: none;
     }
     
-    a.mmenu:hover {
+    li.mmenu:hover>a.mmenu {
         color: rgb(26, 188, 156);
     }
     
@@ -89,12 +95,6 @@
         padding: 30Px 0Px;
     }
     
-    section.shop::after {
-        content: "";
-        clear: both;
-        display: block;
-    }
-    
     div.item {
         float: left;
         width: 255px;
@@ -103,16 +103,9 @@
     }
     
     div.underline {
-        display: flex;
         background-color: rgb(50, 50, 50);
         height: 40px;
         margin-top: -4px;
-    }
-    
-    div.underline::after {
-        content: "";
-        clear: both;
-        display: block;
     }
     
     div.item:hover {
@@ -129,8 +122,7 @@
         color: rgb(255, 255, 255);
         float: left;
         text-transform: uppercase;
-        line-height: 36px;
-        padding: 0Px 14Px;
+        line-height: 40px;
         padding-left: 14Px;
         width: fit-content;
     }
@@ -142,8 +134,7 @@
         color: rgb(255, 255, 255);
         background-color: rgba(255, 255, 255, 0.439);
         margin-left: auto;
-        padding: 0Px 14Px;
-        line-height: 36px;
+        line-height: 40px;
         width: 54px;
         text-align: center;
     }
@@ -215,6 +206,6 @@
         box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.6);
     }
     
-    nav.button:hover>a {
+    nav.button:hover>a.read-more {
         font-weight: bold;
     }
