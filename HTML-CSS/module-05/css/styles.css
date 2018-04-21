@@ -3,30 +3,40 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    /*        outline: 1px solid black; */
+    /*outline: 1px solid black;*/
 }
 
 body {
-    width: 1140px;
-    margin: auto;
+    /*    width: 1600px;
+    height: 1455;
+    margin: auto;*/
     padding: 0px;
 }
 
-nav.mmenu {
-    padding: 30px 0px;
-    width: 1400px;
+header {
+    height: 91px;
+    width: 100%;
+    padding: 15px;
+}
+
+div.wrapper {
+    width: 1140px;
+    margin: 0 auto;
+    position: relative;
 }
 
 a.logo {
     display: inline-block;
+    position: absolute;
+    left: 0px;
+    padding: 15px;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
     line-height: 30Px;
     text-align: left;
-    color: rgb(85, 82, 82);
-    margin: 0Px 15Px;
+    color: #555252;
     text-decoration: none;
 }
 
@@ -35,26 +45,31 @@ a.logo::first-letter {
     color: rgb(26, 188, 156);
 }
 
+nav.mmenu {
+    padding: 15px;
+    width: fit-content;
+    position: absolute;
+    right: 0px;
+}
+
 ul.mmenu {
     display: inline-block;
-    margin: 0px 20px 0px 500px;
-    height: 30px;
 }
 
 li.mmenu {
     display: inline-block;
     list-style-type: none;
     line-height: 30Px;
-    padding: 0px 15px;
-    margin-left: 20Px;
+    padding: 0 15px;
+    margin-left: 15Px;
 }
 
 li.mmenu:hover {
-    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.6);
 }
 
 a.mmenu {
-    color: rgb(85, 82, 82);
+    color: black;
     font-size: 14px;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
