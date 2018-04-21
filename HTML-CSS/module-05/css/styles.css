@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:300,400,700&subset=cyrillic,cyrillic-ext');
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    /*        outline: 1px solid black; */
+}
+
+body {
+    width: 1140px;
+    margin: auto;
+    padding: 0px;
+}
+
+nav.mmenu {
+    padding: 30px 0px;
+    width: 1400px;
+}
+
+a.logo {
+    display: inline-block;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 30Px;
+    text-align: left;
+    color: rgb(85, 82, 82);
+    margin: 0Px 15Px;
+    text-decoration: none;
+}
+
+a.logo::first-letter {
+    font-weight: bold;
+    color: rgb(26, 188, 156);
+}
+
+ul.mmenu {
+    display: inline-block;
+    margin: 0px 20px 0px 500px;
+    height: 30px;
+}
+
+li.mmenu {
+    display: inline-block;
+    list-style-type: none;
+    line-height: 30Px;
+    padding: 0px 15px;
+    margin-left: 20Px;
+}
+
+li.mmenu:hover {
+    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.6);
+}
+
+a.mmenu {
+    color: rgb(85, 82, 82);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+li.mmenu:hover>a.mmenu {
+    color: rgb(26, 188, 156);
+}

@@ -1,0 +1,205 @@
+/* * {
+    outline: 1px solid black;
+} */
+
+:root {
+    --all-width: 400Px;
+    --all-height: 400Px;
+    --smoll-width: 100Px;
+    --smoll-height: 100Px;
+    --start-color: 260;
+    --light-color: 50%;
+    --saturation-color: 100%;
+}
+
+main {
+    width: 1600px;
+    height: 900px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(https://cdn3-5.cdn.schoology.com/system/files/imagecache/lightbox_preview/attachments/files/library/201804/forBackground_5ad9ee3d253d3.jpg);
+    background-size: cover, cover;
+    padding: 50px;
+}
+
+section.all-block {
+    width: var(--all-width);
+    height: var(--all-height);
+    background-color: hsl(calc(var(--start-color) + 180), var(--saturation-color), calc(var(--light-color)/4));
+    position: relative;
+    margin: auto;
+}
+
+div.smoll {
+    width: var(--smoll-width);
+    height: var(--smoll-height);
+    position: absolute;
+}
+
+.left {
+    left: 0px;
+}
+
+.centre {
+    left: calc((var(--all-width) - var(--smoll-width))/2);
+}
+
+.right {
+    right: 0px;
+}
+
+.top {
+    top: 0px;
+}
+
+.middle {
+    top: calc((var(--all-height) - var(--smoll-height))/2);
+}
+
+.bottom {
+    bottom: 0Px;
+}
+
+#lt-1 {
+    background-color: hsl(calc(var(--start-color) + 315), var(--saturation-color), var(--light-color));
+}
+
+#ct-2 {
+    background-color: hsl(calc(var(--start-color)), var(--saturation-color), var(--light-color));
+}
+
+#rt-3 {
+    background-color: hsl(calc(var(--start-color) + 45), var(--saturation-color), var(--light-color));
+}
+
+#lm-4 {
+    background-color: hsl(calc(var(--start-color) + 270), var(--saturation-color), var(--light-color));
+}
+
+#cm-5 {
+    background-color: hsl(calc(var(--start-color)), calc(var(--saturation-color)/4), var(--light-color));
+}
+
+#rm-6 {
+    background-color: hsl(calc(var(--start-color) + 90), var(--saturation-color), var(--light-color));
+}
+
+#lb-7 {
+    background-color: hsl(calc(var(--start-color) + 225), var(--saturation-color), var(--light-color));
+}
+
+#cb-8 {
+    background-color: hsl(calc(var(--start-color) + 180), var(--saturation-color), var(--light-color));
+}
+
+#rb-9 {
+    background-color: hsl(calc(var(--start-color) + 135), var(--saturation-color), var(--light-color));
+}
+
+nav.main-menu {
+    font-family: Calibri, Tahoma, Verdana, sans-serif;
+    font-size: 16Px;
+    padding: 20px 20px 0px 0px;
+    background: linear-gradient(to top, hsla(51, 100%, 50%, 0.9) 0%, hsla(51, 100%, 60%, 0.5) 100%);
+    height: fit-content;
+}
+
+
+/*делаем элмент - блочным, убираем лишние отступы, убираем точки-маркеры*/
+
+ul {
+    list-style: none;
+    display: block;
+    margin: 0px 0px 0px auto;
+    padding: 0;
+    width: fit-content;
+}
+
+
+/*делаем меню из элементов - они теперь, прижаты. А также - позиционированы. Чтобы Выпаающее меню - позиционировалось от них.*/
+
+ul.menu>li {
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+    width: 150Px;
+    margin-left: 20Px;
+}
+
+ul.menu>li>a {
+    display: block;
+    /*Если не сделать, то событие "Ховер" - будет "соскальзывать"*/
+    color: hsl(51, 100%, 10%);
+    /*Цвет текста*/
+    text-decoration: none;
+    /*убираем по умолчнию подчеркивание ссылки*/
+}
+
+ul.menu>li>a:hover {
+    font-weight: bold;
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.4);
+    border-top-left-radius: 30px;
+}
+
+ul.submenu {
+    /*по умолчанию поля подменю - есть, но не отображаются, т.к.   display: none;*/
+    display: none;
+    position: absolute;
+    width: 150px;
+    top: 50px;
+    right: 0;
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.4);
+    /*background-color: white;*/
+    /* border: 1px solid red;*/
+}
+
+ul.submenu>li {
+    /*делаем так, что каждый элемент списка - становится блочным элементом*/
+    display: block;
+    /*Элемент не обязательный, но вполне желательный*/
+    position: relative;
+    text-align: center;
+    line-height: 50px;
+}
+
+ul.submenu>li>a {
+    display: block;
+    color: hsl(51, 100%, 10%);
+    background-color: hsla(51, 100%, 50%, 0.9);
+    text-decoration: none;
+}
+
+ul.submenu>li>a:hover {
+    font-weight: bold;
+    background-color: hsla(51, 100%, 50%, 0.9);
+    box-shadow: inset 3px 3px 6px 3px rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+ul.menu>li:hover>ul.submenu {
+    /*при наведении на элемент списка верхнего урвня li:hover - меню проявляется*/
+    display: block;
+    z-index: 999;
+}
+
+p.items-defination {
+    display: none;
+    position: absolute;
+    width: 300px;
+    top: -5px;
+    right: 160Px;
+    background-color: hsla(51, 100%, 60%, 0.5);
+    border: 1px solid hsl(51, 100%, 10%);
+    padding: 15px;
+    color: hsl(51, 100%, 10%);
+    font-size: 12Px;
+    line-height: 1.1;
+    font-style: italic;
+    text-align: right;
+}
+
+ul.submenu>li:hover>p {
+    display: block;
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
