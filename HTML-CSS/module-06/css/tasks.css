@@ -1,0 +1,129 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    main {
+        box-shadow: inset 3px 3px 6px 3px rgba(0, 0, 0, 0.5);
+        max-width: 1300px;
+        padding: 50px;
+    }
+    
+    .galery {
+        margin: 50px auto;
+        width: 900px;
+        padding: 10px;
+        box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        height: 900px;
+    }
+    
+    .galery-item {
+        flex-basis: 250px;
+        height: 250px;
+        box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .caption-img {
+        font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        font-size: 24px;
+        text-align: center;
+        line-height: 48px;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    img {
+        margin: auto;
+    }
+    
+    .carts {
+        margin: 50px auto;
+        padding: 20px;
+        box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        max-width: 634px;
+        font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    }
+    
+    .carts:hover {
+        box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.8);
+    }
+    
+    .cart-photo {
+        box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.4);
+        margin: 0px;
+        transform: rotateZ(0deg);
+        transition-property: transform, box-shadow;
+        transition-duration: 0.2s;
+    }
+    
+    .cart-photo:hover {
+        box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.8);
+        transform: rotateZ(5deg);
+        transition-property: transform, box-shadow;
+        transition-duration: 0.2s;
+    }
+    
+    @keyframes AnimeNameSize {
+        from {
+            transform: scale(1, 1);
+        }
+        to {
+            transform: scale(1.15, 1.15);
+        }
+    }
+    
+    .name-cart {
+        font-size: 36px;
+        line-height: 48px;
+        font-weight: bold;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        margin: 20px auto;
+        color: black;
+        transition-property: color;
+        transition-duration: 0.2s;
+    }
+    
+    .name-cart:hover {
+        color: hsl(240, 100%, 50%);
+        transition-property: color;
+        transition-duration: 0.2s;
+        animation: AnimeNameSize 0.3s linear;
+    }
+    
+    .text-cart {
+        font-size: 16px;
+    }
+    
+    .like-button {
+        display: block;
+        width: 200px;
+        height: 50px;
+        margin: 20px auto 0px auto;
+        font-size: 36px;
+        line-height: 48px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+        box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.4);
+        transition-property: background-color, width;
+        transition-duration: 0.2s;
+    }
+    
+    .like-button:hover {
+        width: 100%;
+        background-color: hsla(240, 100%, 50%, 0.8);
+        transition-property: background-color, width;
+        transition-duration: 0.2s;
+    }

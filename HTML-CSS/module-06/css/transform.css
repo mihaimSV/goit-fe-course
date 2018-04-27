@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    display: block;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+p {
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 80px;
+    padding: 10px;
+    outline: 2Px solid black;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 3Px 3px 5px rgba(0, 0, 0, 0.5);
+    margin: 100px;
+}
+
+.trans-1 {
+    transform: scale(0.7, 1.5);
+}
+
+.trans-2 {
+    transform: skewX(-10deg);
+}
+
+.trans-3 {
+    transform: rotateX(30deg);
+}
