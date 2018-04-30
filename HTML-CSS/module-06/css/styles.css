@@ -68,7 +68,9 @@
 
 .main-menu-item:hover::after {
     opacity: 1;
-    transition-duration: 0.2s;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
 }
 
 .main-menu-href {
@@ -83,7 +85,9 @@
 
 .main-menu-item:hover .main-menu-href {
     color: var(--color-marcala);
-    transition-duration: 0.2s;
+    transition-property: color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
 }
 
 .title-section {
@@ -189,7 +193,9 @@
 
 .member-team:hover .member-team-img {
     transform: translate(-10px, -10px);
-    transition-duration: 0.2s;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
 }
 
 .caption-member-team {
@@ -230,8 +236,10 @@
 
 .member-team:hover .wrapper-selected-member {
     opacity: 1;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
     /* background-image: linear-gradient(90deg, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);*/
-    transition-duration: 0.2s;
+    transition-duration: 0.3s;
 }
 
 .line-soc-nets {
@@ -260,7 +268,9 @@
 
 .soc-net-item:hover {
     background-color: var(--color-cyan);
-    transition-duration: 0.2s;
+    transition-property: background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
 }
 
 .soc-net-icon {
