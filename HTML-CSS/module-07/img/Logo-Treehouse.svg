@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="79px" height="28px" viewBox="0 0 79 28">
+<style type="text/css"><![CDATA[
+.style0 {
+  font-size: 26px;
+  font-family: 'WisdomScriptAJ';
+  fill: rgb(255,255,255);
+}
+]]></style>
+<filter filterUnits="objectBoundingBox" x="0.00" y="0.00" width="100.00" height="100.00" id="filter0">
+<feFlood flood-color="rgb(253,209,53)" result="coFloodOut1"/>
+<feComposite in="coFloodOut1" in2="SourceAlpha" operator="in" result="coOverlay1"/>
+<feBlend in="coOverlay1" in2="SourceGraphic" mode="normal" result="colorOverlay1"/>
+</filter>
+<text transform="translate(-0.26,19.88)" class="style0" filter="url(#filter0)"><tspan x="0.00 18.10 33.67 41.11 57.07 71.40" fill="rgb(255,255,255)">Golden</tspan></text></svg>

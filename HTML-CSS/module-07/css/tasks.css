@@ -1,0 +1,67 @@
+main {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    margin: 50px auto 0px auto;
+}
+
+p {
+    font-size: 16px;
+    text-align: left;
+    margin: 0px auto 50px auto;
+    font-style: italic;
+}
+
+table {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    margin: auto;
+    font-size: 24px;
+    text-align: center;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+caption {
+    font-size: 28px;
+    padding: 10px;
+    line-height: 48px;
+}
+
+th {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    line-height: 32px;
+}
+
+td {
+    padding: 10px;
+    line-height: 32px;
+    border: 1px solid black;
+    text-transform: uppercase;
+}
+
+tr>td:first-child {
+    text-align: left;
+}
+
+.wrapper {
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    font-style: italic;
+    text-decoration: underline;
+    box-shadow: inset 3px 3px 6px 6px rgba(64, 64, 64, 0.6);
+    border: 1px solid black;
+}
+
+.my-address {
+    font-size: 16px;
+    text-align: left;
+    margin: 10px;
+}
