@@ -284,13 +284,13 @@
     text-transform: uppercase;
 }
 
-.inpt1:valid,
-.inpt3:valid {
+.inpt1:focus:valid,
+.inpt3:focus:valid {
     outline: 2px solid green;
 }
 
-.inpt1:invalid,
-.inpt3:invalid {
+.inpt1:focus:invalid,
+.inpt3:focus:invalid {
     outline: 2px solid red;
 }
 
