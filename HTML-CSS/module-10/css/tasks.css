@@ -1,0 +1,122 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.task__title {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem auto 1rem auto;
+}
+
+.task__picture {
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    box-shadow: 2px 2px 4px 4px hsla(0, 0%, 0%, 0.5);
+}
+
+.task__back {
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    box-shadow: 2px 2px 4px 4px hsla(0, 0%, 0%, 0.5);
+    background-image: url(https://www.mihaim.net/wp-content/uploads/2018/05/arch.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+@media (min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+    .task__back {
+        background-image: url(https://www.mihaim.net/wp-content/uploads/2018/05/arch@x1.5.jpg);
+    }
+}
+
+@media (min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .task__back {
+        background-image: url(https://www.mihaim.net/wp-content/uploads/2018/05/arch@x2.jpg);
+    }
+}
+
+@media (min-resolution: 240dpi),
+(min-resolution: 2.5dppx) {
+    .task__back {
+        background-image: url(https://www.mihaim.net/wp-content/uploads/2018/05/arch@x2.5.jpg);
+    }
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 10px 20px;
+    margin: 20px auto;
+    outline: 1px solid black;
+}
+
+.head__title-logo {
+    margin: 0;
+    padding: 0;
+}
+
+.head__logo {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 36px;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0px 10px;
+}
+
+.head__menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+}
+
+.head__m-item {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    line-height: 36px;
+    margin: 0;
+    padding: 0px 10px;
+}
+
+.head__m-item:hover {
+    color: blue;
+    text-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.7);
+    box-shadow: inset 1px 1px 2px 2px hsla(0, 0%, 0%, 0.5);
+    transition-property: color, text-shadow, box-shadow;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.head__title-logo:hover .head__logo {
+    color: blue;
+    text-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.7);
+    transition-property: color, text-shadow;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.head__title-logo:hover {
+    box-shadow: inset 1px 1px 2px 2px hsla(0, 0%, 0%, 0.5);
+    transition-property: box-shadow;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+}
