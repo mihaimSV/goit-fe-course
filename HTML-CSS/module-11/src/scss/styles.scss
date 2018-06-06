@@ -1,0 +1,451 @@
+@import 'normalize';
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700|Roboto:300i,400');
+$color-cyan: #95e1d3;
+$color-marcala: #f38181;
+$color-marcala-back: #f38181e6;
+$color-gray: #999999;
+$color_light-gray: #cccccc;
+$color-black: #333333;
+$color-yellow: #fce38a;
+$color-yellow-back: #fce38ae6;
+$color-white: white;
+$color-lightborder:#e7e7e7;
+$font-family-title: 'Montserrat',
+sans-serif;
+$font-family-text: 'Roboto',
+sans-serif;
+$font-family-script: "Kaushan Script";
+
+/*
+   Import partials below
+*/
+
+@mixin background-position ($_repeat,
+$_size,
+$_position) {
+    background-repeat: $_repeat;
+    background-size: $_size;
+    background-position: $_position;
+}
+
+@mixin flex-container($justify,
+$align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.head {
+    max-width: 1920px;
+    height: 1000px;
+    background-image: linear-gradient(0deg, $color-yellow-back, $color-marcala-back), url(../img/Layer_15.jpg);
+    @include background-position(no-repeat,
+    cover,
+    center);
+    margin: auto;
+    padding: 25px;
+    &__nav {
+        max-width: 1200px;
+        height: 35px;
+        @include flex-container(space-between,
+        center);
+        margin: 0px auto;
+    }
+    &__logo {
+        font-family: $font-family-title;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: left;
+        color: $color-white;
+        line-height: 35px;
+    }
+    &__btn {
+        border-style: solid;
+        border-width: 3px;
+        border-color: $color-white;
+        background-color: transparent;
+        width: 160px;
+        height: 40px;
+        display: block;
+        margin: auto;
+        font-family: $font-family-title;
+        color: $color-white;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+.main-menu {
+    @include flex-container(flex-end,
+    center);
+    &__list {
+        @include flex-container(flex-end,
+        center);
+        margin: 0px;
+        padding: 0px;
+    }
+    &__item {
+        list-style-type: none;
+        display: block;
+        height: 35px;
+        padding: 0px;
+        margin: 0px 0px 0px 50px;
+        position: relative;
+    }
+    &__btn::after,
+    &__item::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        height: 3px;
+        width: 100%;
+        background-color: $color-yellow;
+        opacity: 0;
+    }
+    &__btn:hover::after,
+    &__item:hover::after {
+        opacity: 1;
+        transition-property: opacity;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.3s;
+    }
+    &__href {
+        font-size: 14px;
+        font-family: $font-family-title;
+        color: $color-white;
+        text-transform: uppercase;
+        line-height: 35Px;
+        text-align: center;
+        text-decoration: none;
+    }
+    &__item:hover &__href {
+        color: $color-yellow;
+        transition-property: color;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.3s;
+    }
+    &__btn {
+        display: block;
+        position: relative;
+        width: 75px;
+        height: 35px;
+        padding: 8px 0px 9px 40px;
+    }
+    &__btn::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 40px;
+        height: 3px;
+        width: 35px;
+        background-color: $color-yellow;
+        opacity: 0;
+    }
+    &__icon {
+        width: 100%;
+        height: 100%;
+        fill: $color-white;
+    }
+    &__btn:hover &__icon {
+        fill: $color-yellow;
+        transition-property: fill;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.3s;
+    }
+}
+
+.titles {
+    max-width: 850Px;
+    margin: 160px auto 110px auto;
+    &__main {
+        font-family: $font-family-script;
+        color: $color-white;
+        font-size: 72px;
+        font-weight: 400;
+        text-align: center;
+        margin: 0px auto 40px auto;
+    }
+    &__description {
+        font-family: $font-family-title;
+        color: $color-white;
+        font-size: 150px;
+        font-weight: 700;
+        line-height: 140px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0px;
+    }
+}
+
+.main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    width: 100%;
+    padding-top: 10px;
+    &__title {
+        font-family: $font-family-title;
+        color: $color-black;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 40px auto 70px auto;
+        position: relative;
+    }
+    &__title::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -40px;
+        left: calc(50% - 30Px);
+        width: 60px;
+        height: 3px;
+        background-color: $color-marcala;
+    }
+    &__topic {
+        display: block;
+        font-family: $font-family-script;
+        color: $color-black;
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: none;
+        margin-bottom: 10px;
+    }
+    &__wrapper {
+        @include flex-container(space-between,
+        flex-start);
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    &__about {
+        font-size: 15px;
+        font-family: $font-family-text;
+        color: $color-gray;
+        line-height: 1.6;
+        text-align: center;
+        max-width: 940px;
+        margin: 0px auto 40px auto;
+    }
+}
+
+.service {
+    margin: 0px 0px 20px 0px;
+    width: 399px;
+    height: 140px;
+    padding: 35px;
+    @include flex-container(space-between,
+    flex-start);
+    &__icon {
+        display: block;
+        width: 32px;
+        height: 32px;
+        padding: 0px;
+    }
+    &__svg {
+        width: 100%;
+        height: 100%;
+        fill: $color-cyan;
+    }
+    &:hover &__svg {
+        fill: $color-marcala;
+        transition-property: fill;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.3s;
+    }
+    &__item {
+        width: 285px;
+        margin: 0px 0px 0px 20px;
+        padding: 0px;
+    }
+    &__title {
+        font-family: $font-family-title;
+        color: $color-black;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-align: left;
+        margin: 0px 0px 20px 0px;
+    }
+    &__description {
+        display: block;
+        font-size: 15px;
+        font-family: $font-family-text;
+        color: $color-gray;
+        line-height: 1.3;
+        text-align: left;
+        height: 39px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.member {
+    width: 390px;
+    height: 561px;
+    position: relative;
+    padding: 10px 0px 0px 10px;
+    margin: 30px 0px;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 10px;
+        background-color: $color-cyan;
+        width: 380px;
+        height: 470px;
+        z-index: -1;
+    }
+    &__photo {
+        width: 380px;
+        height: 470px;
+    }
+    &:hover &__photo {
+        transform: translate(-10px, -10px);
+        transition-property: transform;
+        transition-duration: 0.3s;
+    }
+    &__selected {
+        display: block;
+        width: 380px;
+        height: 470px;
+        position: absolute;
+        transform: translate(10px, 10px);
+        top: 0px;
+        left: 0px;
+        background-image: linear-gradient(0deg, $color-yellow-back 0%, $color-marcala-back 100%);
+        opacity: 0;
+    }
+    &:hover &__selected {
+        transform: translate(0px, 0px);
+        opacity: 1;
+        transition-property: opacity, transform;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.3s;
+    }
+    &__name {
+        font-size: 14px;
+        font-family: $font-family-title;
+        color: $color-black;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-top: 30px;
+        text-align: center;
+    }
+    &__job {
+        font-size: 15px;
+        font-family: $font-family-text;
+        color: $color-gray;
+        font-style: italic;
+        margin-top: 15px;
+        text-align: center;
+    }
+}
+
+.soc-nets {
+    width: 228px;
+    height: 56px;
+    margin: 207px auto;
+    @include flex-container(space-between,
+    center);
+    &__item {
+        background-color: $color-yellow;
+        display: block;
+        width: 56px;
+        height: 56px;
+        display: flex;
+    }
+    &__item:hover {
+        background-color: $color-marcala;
+        transition-property: background-color;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.3s;
+    }
+    &__icon {
+        display: block;
+        margin: auto;
+        width: 50%;
+        height: 50%;
+        fill: $color-marcala;
+    }
+    &__item:hover &__icon {
+        fill: $color-white;
+        transition-property: fill;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.3s;
+    }
+}
+
+.foot {
+    max-width: 1200px;
+    margin: 20px auto 0px auto;
+    padding: 40px 0px 20px 0px;
+    @include flex-container(space-between,
+    center);
+}
+
+.copyright {
+    font-size: 14px;
+    font-family: $font-family-title;
+    color: $color-black;
+    line-height: 40px;
+    text-align: left;
+    &__author {
+        color: $color-marcala;
+        text-decoration: none;
+    }
+}
+
+.subscribe {
+    width: 380px;
+    height: 40px;
+    display: flex;
+    &__mail {
+        font-size: 15px;
+        font-family: $font-family-text;
+        font-weight: 300;
+        color: $color_light-gray;
+        font-style: italic;
+        line-height: 1.6;
+        text-align: left;
+        border: 1px solid $color-lightborder;
+        background-color: $color-white;
+        width: 230px;
+        height: 40px;
+    }
+    &__btn {
+        border: none;
+        background-color: $color-cyan;
+        width: 150px;
+        height: 40px;
+        font-family: $font-family-title;
+        color: $color-white;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+@media (min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .head {
+        background-image: linear-gradient(0deg, $color-yellow, $color-marcala), url(../img/Layer_15@2x.jpg);
+        @include background-position(no-repeat,
+        cover,
+        center);
+    }
+}
