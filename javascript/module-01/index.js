@@ -29,15 +29,15 @@ const msgError = "Доступ запрещен!";
 const msgHello = "Добро пожаловать!";
 
 const inputLogin = prompt("Please, enter your login: ");
-if (inputLogin == null) {
+if (inputLogin === null) {
     alert(msgCancel);
-} else if (inputLogin != ADMIN_LOGIN) {
+} else if (inputLogin !== ADMIN_LOGIN) {
     alert(msgError);
 } else {
     const inputPassword = prompt("Please, enter you password: ");
-    if (inputPassword == null) {
+    if (inputPassword === null) {
         alert(msgCancel);
-    } else if (inputPassword != ADMIN_PASSWORD) {
+    } else if (inputPassword !== ADMIN_PASSWORD) {
         alert(msgError);
     } else {
         alert(msgHello);
