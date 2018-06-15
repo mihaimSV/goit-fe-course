@@ -31,7 +31,6 @@ do {
     userInput = prompt("Введите число");
     currentNumber = Number(userInput);
     counter += 1;
-    //console.log(currentInput, currentNumber); 
     if ((userInput === null)) {
         break;
     } else if (Number.isNaN(currentNumber) || (userInput === "")) {
@@ -40,14 +39,9 @@ do {
         numbers.push(currentNumber);
     }
 } while (counter < MAXLENGTHARR);
-
-//console.log(`Массив - ${arrayOfNumbers} длиной ${arrayOfNumbers.length}`); 
-
 if (numbers.length > 0) {
-    //console.log(summArray);
     for (let Num of numbers) {
         total += Num;
-        //console.log(summArray);
     }
 }
 alert(`Сумма всех значений массива - ${numbers} равна ${total}`);
