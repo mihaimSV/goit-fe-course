@@ -2,10 +2,12 @@ const MaxNumber = 10000;
 let isNatural = true;
 let arrNaturals = [1];
 let sumNaturals = 1;
+let maxDivisor = 1;
 
 for (let num = 3; num <= MaxNumber; num += 1) {
     isNatural = true;
-    for (let i = 2; i < num; i += 1) {
+    maxDivisor = Math.ceil(num / 2);
+    for (let i = 2; i < maxDivisor; i += 1) {
         if (num % i === 0) {
             isNatural = false;
             break;
