@@ -1,18 +1,24 @@
-const QuantityNaturals = 10000; // Количество натуральных чисел, коотрые будем искать 
+const QuantityNaturals = 100000; // Количество натуральных чисел, коотрые будем искать 
 // const MaxNumber = 10000;
 let isNatural = true;
-let arrNaturals = [1];
-let sumNaturals = 1;
-let maxDivisor = 1;
+let arrNaturals = [1, 2, 3, 5, 7]; // массив натуральных чисел
+let arrNotNats = [9, 25, 49]; // массив составных чисел, которые отсеиваем
+let sumNaturals = 18;
 
-let num = 3; // начинаем искать натуральные числа с 3
-let currentNatural = 1; // Количество найденных натуральных чисел
+let num = 9; // начинаем искать натуральные числа с 9
+let currentNatural = 5; // Количество найденных натуральных чисел
 do {
     isNatural = true;
-    maxDivisor = Math.ceil(num / 2);
-    for (let i = 2; i < maxDivisor; i += 1) {
-        if (num % i === 0) {
-            isNatural = false;
+    for (let i = 0; i < arrNotNats.length - 1; i += 1) { // перебираем массив составных чисел для отсеивания
+        for (let NotNat = arrNotNats[i]; NotNat <= num; NotNat += 2 * arrNaturals[i + 2]) { // производим отсев по (i+2)-му натуральному числу
+            if (NotNat === num) {
+                isNatural = false;
+                arrNotNats[i] = NotNat + 2 * arrNaturals[i + 2];
+                break;
+            }
+            arrNotNats[i] = NotNat + 2 * arrNaturals[i + 2];
+        }
+        if (!isNatural) {
             break;
         }
     }
@@ -20,8 +26,9 @@ do {
         arrNaturals.push(num);
         sumNaturals += num;
         currentNatural += 1;
+        arrNotNats.push(num * num);
     }
-    num += 1;
+    num += 2;
 } while (currentNatural < QuantityNaturals);
 
 let midleNatural = Math.round(sumNaturals / arrNaturals.length);
