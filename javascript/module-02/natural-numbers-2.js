@@ -1,4 +1,4 @@
-const QuantityNaturals = 10000; // Количество натуральных чисел, коотрые будем искать 
+const QuantityNaturals = 100000; // Количество натуральных чисел, коотрые будем искать 
 // const MaxNumber = 10000;
 let isNatural = true;
 let arrNaturals = [1];
