@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fe-JS-module-03-tasks</title>
+    <meta name="description" content="GoIT. Fe. JS. module-03. tasks">
+    <meta name="copyright" content="Mykhaylo Svirinovskyi">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1 class="task--main-title">JavaScript. module-03.</h1>
+
+    <article class="task-wrapper">
+        <h2 class="task--sub-title">Домашнее задание</h2>
+        <p class="task--description">Есть массив <em>logins</em> с логинами пользователей. Напишите скрипт добавления логина в массив <em>logins</em>.</p>
+        <p class="task--description task--description__attention">Добавляемый логин должен:</p>
+        <ul>
+            <li class="task--description task--description__itrem">проходить проверку на длину, от 4 до 16-ти символов включительно</li>
+            <li class="task--description task--description__itrem">быть уникален, тоесть еще не используется в массиве logins</li>
+        </ul>
+        <p class="task--description task--description__attention">Разбейте задачу на подзадачи, что удобно решить используя функции:</p>
+        <p class="task--description"> Для начала напишите функцию <em>checkLoginValidity(login)</em> которая получает логин как аргумент, проверяет количество символов логина и возвращает true если логин подходит под условие длины от 4-х до 16-ти символов включительно, и false если
+            не подходит. Убедитесь что функция работает верно. </p>
+        <p class="task--description"> Далее создайте функцию <em>checkIfLoginExists(logins, login)</em>, которая получает логин и список всех логинов как аргументы, проверяет наличие логина в массиве logins, возвращая false если такого логина в массиве еще нет, и true если есть. Убедитесь
+            что функция работает верно.</p>
+        <p class="task--description task--description__attention">Далее напишите функцию <em>addLogin(logins, login)</em> которая: </p>
+        <ul>
+            <li class="task--description task--description__itrem">Получает новый логин и массив всех логинов как аргументы </li>
+            <li class="task--description task--description__itrem">Проверяет валидность логина используя вспомогательную функцию <em>checkLoginValidity</em> </li>
+            <li class="task--description task--description__itrem">Если логин не валиден, прекратить исполнение функции <em>addLogin</em> и вернуть строку <span>'Ошибка! Логин должен быть от 4 до 16 символов'</span> </li>
+            <li class="task--description task--description__itrem">Если логин валиден, функция <em>addLogin</em> проверяеть уникальность логина с помощью функции <em>checkIfLoginExists</em> </li>
+            <li class="task--description task--description__itrem">Если <em>checkIfLoginExists</em> вернет false, <em>addLogin</em> добавляет новый логин в <em>logins</em> и возвращает строку <span> 'Логин успешно добавлен!'</span> </li>
+            <li class="task--description task--description__itrem">Если <em>checkIfLoginExists</em> вернет true, тогда <em>addLogin</em> не добавляет логин в массив и возвращает строку <span> 'Такой логин уже используется!'</span> </li>
+        </ul>
+        <p class="task--description task--description__attention">Принцип единственной ответственности функции: </p>
+        <ul>
+            <li class="task--description task--description__itrem"> <em>checkIfLoginExists</em> только проверяет есть ли такой логин и возвращает true или false. Больше ничего не делает.</li>
+            <li class="task--description task--description__itrem"><em>checkLoginValidity</em> только проверяет валидный ли логин и возвращает true или false. Больше ничего не делает.</li>
+            <li class="task--description task--description__itrem"><em>addLogin</em> вызывает обе функции и по результату их работы или добавляет логин в <em>logins</em> или нет, возвращая указанные строки. Больше ничего не делает.</li>
+        </ul>
+        <samp class="task-check">const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];</samp>
+    </article>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
