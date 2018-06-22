@@ -190,14 +190,7 @@ const addUniqueNumbers = function(...addArr) {
     }
     let wasAded = 0;
     for (let elemAdd of addArr) {
-        let needAdd = true;
-        for (let elemUniq of uniqueNumbers) {
-            if (elemAdd === elemUniq) {
-                needAdd = false;
-                break;
-            }
-        }
-        if (needAdd) {
+        if (!uniqueNumbers.includes(elemAdd)) {
             uniqueNumbers.push(elemAdd);
             wasAded += 1;
         }
@@ -236,10 +229,8 @@ const removeFromArray = function(arr, ...remElements) {
         return [];
     }
     for (let remEl of remElements) {
-        for (let i = 0; i < arr.length; i += 1) {
-            if (remEl === arr[i]) {
-                arr.splice(i, 1);
-            }
+        if (arr.includes(remEl)) {
+            arr.splice(arr.indexOf(remEl), 1);
         }
     }
     return arr;
