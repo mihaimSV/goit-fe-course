@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fe-JS-module-04-tasks</title>
+    <meta name="description" content="GoIT. Fe. JS. module-04. tasks">
+    <meta name="copyright" content="Mykhaylo Svirinovskyi">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1 class="task--main-title">JavaScript. module-04.</h1>
+
+    <article class="task-wrapper">
+        <h2 class="task--sub-title">Задание 1</h2>
+        <p class="task--description task--description__attention">Напишите скрипт, который, для объекта <em>user</em>, последовательно:</p>
+        <ul>
+            <li class="task--description task--description__itrem">добавляет поле mood со значением 'happy'</li>
+            <li class="task--description task--description__itrem">заменяет значение hobby на 'javascript'</li>
+            <li class="task--description task--description__itrem">удаляет свойство premium</li>
+            <li class="task--description task--description__itrem">выводит содержимое объекта user в формате ключ:значение используя цикл for...in</li>
+            <li class="task--description task--description__itrem">выводит содержимое объекта user в формате ключ:значение используя Object.keys и for...of</li>
+            <li class="task--description task--description__itrem">выводит содержимое объекта user в формате ключ:значение используя Object.entries и for...of</li>
+        </ul>
+    </article>
+
+    <article class="task-wrapper">
+        <h2 class="task--sub-title">Задание 2</h2>
+        <p class="task--description">Напиште скрипт который определит и выведет в консоль имя сотрудника который выполнил больше всех задач.</p>
+        <p class="task--description">Сотрудники и кол-во выполненых задач содержатся как свойства объекта в формате "имя":"кол-во задач"</p>
+    </article>
+
+    <article class="task-wrapper">
+        <h2 class="task--sub-title">Задание 3</h2>
+        <p class="task--description">Напишите функцию <em>countProps(obj)</em>, считающую кол-во свойств в объекте. Функция возвращает количество свойств.</p>
+        <samp class="task-check">console.log(countProps({})); // 0</samp>
+        <samp class="task-check">console.log(countProps({ a: 1, b: 3, c: 'hello' })); // 3</samp>
+    </article>
+
+    <article class="task-wrapper">
+        <h2 class="task--sub-title">Задание 4</h2>
+        <p class="task--description">Создайте функцию <em>isObjectEmpty(obj)</em>, которая получает один аргумент obj - объект, и проверяет пуст ли он (есть ли в нем свойства).</p>
+        <p class="task--description">Возвращает true если объект пустой, false если не пустой.</p>
+        <samp class="task-check">console.log(isObjectEmpty({})); // true</samp>
+        <samp class="task-check">console.log(isObjectEmpty({ a: 1 })); // false</samp>
+        <samp class="task-check">console.log(isObjectEmpty({ a: 1, b: 2 })); // false</samp>
+    </article>
+
+    <article class="task-wrapper">
+        <h2 class="task--sub-title">Задание 5</h2>
+        <p class="task--description">Напишите функцию <em>countTotalSalary(salaries)</em>, получающую объект и считающую общую сумму запрплаты работников.</p>
+        <p class="task--description">Каждое поле объекта передаваемого в функцию, имеет вид "имя":"зарплата"</p>
+        <p class="task--description">Функция возвращает общую сумму зарплаты.</p>
+        <samp class="task-check">console.log(countTotalSalary({})); // 0</samp>
+        <samp class="task-check">console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 })); // 330</samp>
+    </article>
+
+    <article class="task-wrapper">
+        <h2 class="task--sub-title">Задание 6</h2>
+        <p class="task--description">Напишите функцию <em>getAllPropValues(arr, prop)</em>, которая получает массив объектов и имя ключа, возвращает массив значений определенного поля prop из каждого объекта в массиве</p>
+        <samp class="task-check">console.log(getAllPropValues(users, 'name')); // ['Poly', 'Mango', 'Ajax']</samp>
+        <samp class="task-check">console.log(getAllPropValues(users, 'mood')); // ['happy', 'blissful', 'tired']</samp>
+        <samp class="task-check">console.log(getAllPropValues(users, 'active')); // []</samp>
+    </article>
+
+    <article class="task-wrapper">
+        <h2 class="task--sub-title">Задание 7</h2>
+        <p class="task--description">Напишите код, который бы с помощью функции-конструкора <em>User</em>, позволял создавать объекты пользователя со следующим свойствами:</p>
+        <ul>
+            <li class="task--description task--description__itrem"><em>name</em> - строка (имя)</li>
+            <li class="task--description task--description__itrem"><em>isActive</em> - буль (активен)</li>
+            <li class="task--description task--description__itrem"><em>age</em> - число (возраст)</li>
+            <li class="task--description task--description__itrem"><em>friends</em> - число (кол-во друзей)</li>
+            <p class="task--description">Имя, активность, возраст и друзей, необходимо передать как аргументы при вызове конструктора.</p>
+            <p class="task--description">Добавить метод <em>getUserInfo()</em>, которая, выводит строку: `User ${имя} is ${возраст} years old and has ${кол-во друщзей} friends`</p>
+            <p class="task--description">Создать несколько объектов пользователя User и с помощью функции getUserInfo вывести строку в консоль.</p>
+        </ul>
+    </article>
+
+    <article class="task-wrapper">
+        <h2 class="task--sub-title">Задание 8</h2>
+        <p class="task--description">Расставьте отсутствующие <em>this</em> в методах объекта <em>store</em></p>
+        <samp class="task-check">store.addManager('chelsey'); // ['poly', 'mango', 'ajax', 'chelsey']</samp>
+        <samp class="task-check">store.removeManager('mango'); // ['poly', ajax', 'chelsey']</samp>
+        <samp class="task-check">store.getProducts(); // ['bread', 'cheese', 'milk', 'apples']</samp>
+    </article>
+
+    <article class="task-wrapper">
+        <h2 class="task--sub-title">Задание 9</h2>
+        <p class="task--description">Расставьте отсутствующие <em>this</em> в конструкторе объектов <em>Account</em></p>
+        <samp class="task-check">console.log(account.login); // 'Mango'</samp>
+        <samp class="task-check">console.log(account.password); // 'qwe123'</samp>
+        <samp class="task-check">console.log(account.type); // 'premium'</samp>
+        <samp class="task-check">console.log(account.changePassword("asdzxc")); // 'asdzxc'</samp>
+        <samp class="task-check">console.log(account.getAccountInfo()); // Login: 'Mango', Pass: 'asdzxc', Type: 'premium'</samp>
+    </article>
+
+    <script src="task.js"></script>
+</body>
+
+</html>

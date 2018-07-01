@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fe-JS-module-03-tasks</title>
+    <meta name="description" content="GoIT. Fe. JS. module-03. tasks">
+    <meta name="copyright" content="Mykhaylo Svirinovskyi">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1 class="task--main-title">JavaScript. module-04.</h1>
+
+    <article class="task-wrapper">
+        <h2 class="task--sub-title">Домашнее задание</h2>
+        <p class="task--description">Создайте скрипт кассира, который получает список продуктов и деньги, подсчитывает общую стоимость продуктов, и в зависимости от того хватает денег или нет, уведомляет покупателя о результате.</p>
+        <p class="task--description task--description__attention">Необходимо создать функцию-конструктор <em>Cashier</em>. Поля будущего объекта кассира (🔔 объявляются как this.имя_поля в конструкторе): </p>
+        <ul>
+            <li class="task--description task--description__itrem"><em>name</em> - строка, имя кассира, передается при вызове конструктора</li>
+            <li class="task--description task--description__itrem"><em>productsDatabase</em> - объект база данных продуктов, передается при вызове конструктора</li>
+            <li class="task--description task--description__itrem"><em>totalPrice</em> - число, общая стоимость покупок текущего покупателя, всегда начинается с 0 </li>
+            <li class="task--description task--description__itrem"><em>customerMoney</em> - число, сумма введенная пользователем при запросе денег, всегда начинается с 0</li>
+            <li class="task--description task--description__itrem"><em>changeAmount</em> - число, сдача, всегда начинается с 0</li>
+            <li class="task--description task--description__itrem"><em>greet()</em> - метод, выводит в консоль строку <span>`Здравствуйте, вас обслуживает ${имя_кассира}`</span></li>
+            <li class="task--description task--description__itrem"><em>onSuccess()</em> - метод, выводит в консоль строку <span>`Спасибо за покупку, ваша сдача ${сдача}`</span> если сдача больше 0, и строку <span>`Спасибо за покупку`</span> если сдача равна 0. </li>
+            <li class="task--description task--description__itrem"><em>onError()</em> - метод, выводит в консоль строку <span>'Очень жаль, вам не хватает денег на покупки'</span></li>
+            <li class="task--description task--description__itrem"><em>countTotalPrice(order)</em> - метод, получает список покупок, считает общую стоимость исходя из поля <em>productsDatabase</em>. Записывает результат в поле <em>totalPrice</em>.</li>
+            <li class="task--description task--description__itrem"><em>getCustomerMoney(value)</em> - метод, получает число - деньги покупателя и записывает его в поле <em>customerMoney</em></li>
+            <li class="task--description task--description__itrem"><em>countChange()</em> - метод, считает сдачу, разницу между общей суммой покупок и деньгами покупателя, записывает результат в поле <em>changeAmount</em>.</li>
+            <ul>
+                <li class="task--description task--description__subitrem">Обязательно проверьте что <em>customerMoney</em> не меньше чем значение поля <em>totalPrice</em></li>
+                <li class="task--description task--description__subitrem">Если денег было передано достаточно, возвращает текущее значение <em>changeAmount</em></li>
+                <li class="task--description task--description__subitrem">Если было передано меньше денег чем в поле </em>totalPrice</em>, возвращает null </li>
+            </ul>
+            <li class="task--description task--description__itrem"><em>reset()</em> - метод, сбрасывает поля <em>totalPrice</em>, <em>customerMoney</em> и <em>changeAmount</em> в 0.</li>
+        </ul>
+        <samp class="task-check">const vasya = new Cashier("Vasya", products); // Кассир Вася</samp>
+        <samp class="task-check">const anna = new Cashier("Anna", products); // Кассир Аня</samp>
+        <samp class="task-check">const order1 = { bread: 2, milk: 2, apples: 1, cheese: 1 };</samp>
+        <samp class="task-check">const order2 = { bread: 1, milk: 1, apples: 1, chicken: 2, cheese: 2 };</samp>
+        <samp class="task-check">const order3 = { bread: 3, apples: 5, cheese: 1 };</samp>
+        <samp class="task-check">const order4 = { milk: 3, apples: 4, chicken: 1, cheese: 3 };</samp>
+        <samp class="task-check">const order5 = { bread: 2, milk: 2, cheese: 1 };;</samp>
+        <samp class="task-check">tranaction(order1, vasya, 300);</samp>
+        <samp class="task-check">tranaction(order2, vasya, 600);</samp>
+        <samp class="task-check">tranaction(order3, anna, 200);</samp>
+        <samp class="task-check">tranaction(order4, anna, 500);</samp>
+        <samp class="task-check">tranaction(order5, vasya, 650);</samp>
+    </article>
+    <script src="index.js"></script>
+</body>
+
+</html>
