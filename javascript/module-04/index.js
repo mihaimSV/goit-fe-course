@@ -37,64 +37,65 @@ function Cashier(name, productsDatabase) {
     this.totalPrice = 0;
     this.customerMoney = 0;
     this.changeAmount = 0;
-}
-/* Функция трансакции - обслуживание кассиром очередного покупателя. */
-const tranaction = function(order, nextCashier, money) {
-    /* Создадим методы, необходимые для обслуживания */
-    const greet = function() {
-        console.log(`Здравствуйте, вас обслуживает ${this.name}`);
-        return this.name;
-    };
-    const countTotalPrice = function(order) {
+    /* Создадим методы, необходимые для рассчетов при обслуживании */
+    this.countTotalPrice = function(order) {
         for (let item in order) {
             this.totalPrice += order[item] * this.productsDatabase[item];
         }
         return this.totalPrice;
     };
-    const getCustomerMoney = function(value) {
+    this.getCustomerMoney = function(value) {
         this.customerMoney = value;
     };
-    const countChange = function() {
+    this.countChange = function() {
         if (this.totalPrice > this.customerMoney) {
             return null;
         }
         this.changeAmount = this.customerMoney - this.totalPrice;
         return this.changeAmount;
     };
-    const onSuccess = function() {
-        if (this.changeAmount > 0) {
-            console.log(`Спасибо за покупку, ваша сдача ${this.changeAmount}`);
-        }
-        if (this.changeAmount === 0) {
-            console.log("Спасибо за покупку");
-        }
-        return this.changeAmount;
-    };
-    const onError = function() {
-        console.log("Очень жаль, вам не хватает денег на покупки");
-    };
-    const reset = function() {
+    this.reset = function() {
         this.totalPrice = 0;
         this.customerMoney = 0;
         this.changeAmount = 0;
     };
-    /* Производим обслуживание */
-    console.log("кассир,", nextCashier.name); // Имя кассира
-    console.log(`for start - totalPrice = ${nextCashier.totalPrice}, customerMoney = ${nextCashier.customerMoney}, changeAmount = ${nextCashier.changeAmount}`); // 0, 0, 0
-    greet.call(nextCashier); // Здравствуйте, вас обслуживает кассир ...
-    console.log("Заказ: ", order); // Очередной заказ
-    countTotalPrice.call(nextCashier, order);
-    console.log("на общую сумму: ", nextCashier.totalPrice); // Проверям что посчитали
-    getCustomerMoney.call(nextCashier, money);
-    console.log("с покупателя получили: ", nextCashier.customerMoney); // Проверяем что в поле с деньгами пользователя
-    const result = countChange.call(nextCashier);
-    console.log("сдачи: ", result); // Проверяем что нам вернул countChange
-    if (result !== null) { onSuccess.call(nextCashier); } // Спасибо за покупку, ваша сдача ..., При успешном обслуживании, onSuccess.
-    else { onError.call(nextCashier); } // Очень жаль, вам не хватает денег на покупки, При неудачном обслуживании, onError
-    reset.call(nextCashier);
-    console.log(`after reset - totalPrice = ${nextCashier.totalPrice}, customerMoney = ${nextCashier.customerMoney}, changeAmount = ${nextCashier.changeAmount}`); // 0, 0, 0
-    return result;
-};
+    /* Функция трансакции - обслуживание кассиром очередного покупателя. */
+    this.tranaction = function(order, money) {
+        /* Создадим методы, выдоющие сообщения при обслуживании */
+        const greet = function(obj) {
+            console.log(`Здравствуйте, вас обслуживает ${obj.name}`);
+            return obj.name;
+        };
+        const onSuccess = function(obj) {
+            if (obj.changeAmount > 0) {
+                console.log(`Спасибо за покупку, ваша сдача ${obj.changeAmount}`);
+            }
+            if (obj.changeAmount === 0) {
+                console.log("Спасибо за покупку");
+            }
+            return obj.changeAmount;
+        };
+        const onError = function() {
+            console.log("Очень жаль, вам не хватает денег на покупки");
+        };
+        /* Производим обслуживание */
+        console.log("кассир,", this.name); // Имя кассира
+        console.log(`for start - totalPrice = ${this.totalPrice}, customerMoney = ${this.customerMoney}, changeAmount = ${this.changeAmount}`); // 0, 0, 0
+        greet(this); // Здравствуйте, вас обслуживает кассир ...
+        console.log("Заказ: ", order); // Очередной заказ
+        this.countTotalPrice(order);
+        console.log("на общую сумму: ", this.totalPrice); // Проверям что посчитали
+        this.getCustomerMoney(money);
+        console.log("с покупателя получили: ", this.customerMoney); // Проверяем что в поле с деньгами пользователя
+        const result = this.countChange();
+        console.log("сдачи: ", result); // Проверяем что нам вернул countChange
+        if (result !== null) { onSuccess(this); } // Спасибо за покупку, ваша сдача ..., При успешном обслуживании, onSuccess.
+        else { onError(); } // Очень жаль, вам не хватает денег на покупки, При неудачном обслуживании, onError
+        this.reset();
+        console.log(`after reset - totalPrice = ${this.totalPrice}, customerMoney = ${this.customerMoney}, changeAmount = ${this.changeAmount}`); // 0, 0, 0
+        return result;
+    };
+}
 
 /* Заказ пользователя хранится в виде объекта следующего формата. "имя-продукта":"количество-единиц" */
 const order1 = { bread: 2, milk: 2, apples: 1, cheese: 1 };
@@ -110,21 +111,21 @@ const anna = new Cashier("Anna", products);
 console.log("Прайс: ", products); // ссылка на базу данных продуктов (объект products)
 
 console.group(1);
-tranaction(order1, vasya, 300);
+vasya.tranaction(order1, 300);
 console.groupEnd(1);
 
 console.group(2);
-tranaction(order2, vasya, 600);
+vasya.tranaction(order2, 600);
 console.groupEnd(2);
 
 console.group(3);
-tranaction(order3, anna, 200);
+anna.tranaction(order3, 200);
 console.groupEnd(3);
 
 console.group(4);
-tranaction(order4, anna, 500);
+anna.tranaction(order4, 500);
 console.groupEnd(4);
 
 console.group(5);
-tranaction(order5, vasya, 650);
+vasya.tranaction(order5, 650);
 console.groupEnd(5);
