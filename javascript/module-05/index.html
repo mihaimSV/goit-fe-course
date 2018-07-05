@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fe-JS-module-05-tasks</title>
+    <meta name="description" content="GoIT. Fe. JS. module-05. tasks">
+    <meta name="copyright" content="Mykhaylo Svirinovskyi">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1 class="task--main-title">JavaScript. module-05.</h1>
+    <article class="task-wrapper">
+        <h2 class="task--sub-title">Домашнее задание</h2>
+        <p class="task--description task--description__attention">Используя массив (users) объектов пользователей, напишите функции которые с помощью функциональных методов массивов (никаких for, splice и т.д.) выполняют указанные операции.</p>
+    </article>
+    <article class="task-wrapper">
+        <p class="task--description">Получить массив имен (поле name) всех пользователей</p>
+        <samp class="task-check">const getAllNames = arr => arr.map(item => item.name);</samp>
+        <samp class="task-check">console.log(getAllNames(users));// [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]</samp>
+    </article>
+    <article class="task-wrapper">
+        <p class="task--description">Получить массив объектов пользователей по цвету глаз (поле eyeColor)</p>
+        <samp class="task-check">const getUsersByEyeColor = (arr, color) => arr.filter(item => item.eyeColor === color);</samp>
+        <samp class="task-check">console.log(getUsersByEyeColor(users, "blue")); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]</samp>
+    </article>
+    <article class="task-wrapper">
+        <p class="task--description">Получить массив имен пользователей по полу (поле gender)</p>
+        <samp class="task-check">const getUsersByGender = (arr, gender) => arr.filter(item => item.gender === gender).map(obj => obj.name);</samp>
+        <samp class="task-check">console.log(getUsersByGender(users, "male")); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]</samp>
+    </article>
+    <article class="task-wrapper">
+        <p class="task--description">Получить массив только неактивных пользователей (поле isActive)</p>
+        <samp class="task-check">const getInactiveUsers = arr => arr.filter(item => !item.isActive);</samp>
+        <samp class="task-check">console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]</samp>
+    </article>
+    <article class="task-wrapper">
+        <p class="task--description">Получить пользоваля (не массив) по email (поле email, он уникальный)</p>
+        <samp class="task-check">const getUserByEmail = (arr, email) => arr.find(item => item.email === email);</samp>
+        <samp class="task-check">console.log(getUserByEmail(users, "shereeanthony@kog.com")); // {объект пользователя Sheree Anthony}</samp>
+        <samp class="task-check">console.log(getUserByEmail(users, "elmahead@omatom.com")); // {объект пользователя Elma Head}</samp>
+    </article>
+    <article class="task-wrapper">
+        <p class="task--description">Получить массив пользователей попадающих в возрастную категорию от min до max лет (поле age)</p>
+        <samp class="task-check">const getUsersWithAge = (arr, min, max) => arr.filter(item => (item.age > min) && (item.age < max));</samp>
+        <samp class="task-check">console.log(getUsersWithAge(users, 20, 30)); // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]</samp>
+        <samp class="task-check">console.log(getUsersWithAge(users, 30, 40)); // [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]</samp>
+    </article>
+    <article class="task-wrapper">
+        <p class="task--description">Получить общую сумму баланса (поле balance) всех пользователей</p>
+        <samp class="task-check">const getTotalBalance = arr => arr.reduce((accum, item) => accum += item.balance, 0);</samp>
+        <samp class="task-check">console.log(getTotalBalance(users)); // 20916</samp>
+    </article>
+    <article class="task-wrapper">
+        <p class="task--description">Массив имен всех пользователей у которых есть друг с указанным именем </p>
+        <samp class="task-check">const getUsersByFriend = (arr, name) => arr.filter(item => item.friends.some(frnd => frnd === name)).map(obj => obj.name);</samp>
+        <samp class="task-check">console.log(getUsersByFriend(users, "Briana Decker")); // [ 'Sharlene Bush', 'Sheree Anthony' ]</samp>
+        <samp class="task-check">console.log(getUsersByFriend(users, "Goldie Gentry")); // [ 'Elma Head', 'Sheree Anthony' ]</samp>
+    </article>
+
+    <article class="task-wrapper">
+        <p class="task--description">Получить массив всех скиллов всех пользователей (поле skills), при этом не должно быть повторяющихся скиллов и они должны быть отсортированы в алфавитном порядке</p>
+        <samp class="task-check">console.log(getAllSkills(users)); // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]</samp>
+    </article>
+    <article class="task-wrapper">
+        <p class="task--description">Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)</p>
+        <samp class="task-check">console.log(getUserNamesSortedByFriendsCount(users));// [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]</samp>
+    </article>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
