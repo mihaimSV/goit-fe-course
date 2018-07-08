@@ -146,6 +146,16 @@ const getAllSkills = arr => {
 
 console.log(getAllSkills(users)); // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
 
+// Второй, традиционный, вариант, без объектов.
+const getAllSkills1 = arr => {
+    const arrSkillsList = arr.reduce((accArr, obj) => (obj.skills.length > 0) ?
+        obj.skills.reduce((skillsArr, elem) => (!skillsArr.includes(elem)) ? skillsArr.concat(elem) : skillsArr, accArr) :
+        accArr, []); // reduce по списку объектов собрал все skills в один длинный массив
+    return arrSkillsList.sort();
+};
+
+console.log(getAllSkills1(users)); // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+
 /*Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends) */
 const getUserNamesSortedByFriendsCount = arr => {
     const arrUsers = arr.map(item => ({ // создадим свой массив, чтоб не менять исходній сортировкой
