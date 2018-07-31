@@ -103,36 +103,60 @@ class Hamburger {
       (this._toppings.reduce((sum, elem) => sum + Hamburger.TOPPINGS[elem].calories, 0));
   }
 
-  // Размеры, виды добавок и начинок объявите как статические поля класса.
-  static get SIZE_SMALL() { return 'SIZE_SMALL'; }
-  static get SIZE_LARGE() { return 'SIZE_LARGE'; }
-  static get SIZES() {
-    return {
-      [Hamburger.SIZE_SMALL]: { price: 30, calories: 50 },
-      [Hamburger.SIZE_LARGE]: { price: 50, calories: 100 }
-    };
-  }
+  // // Размеры, виды добавок и начинок объявите как статические поля класса.
+  // static get SIZE_SMALL() { return 'SIZE_SMALL'; }
+  // static get SIZE_LARGE() { return 'SIZE_LARGE'; }
+  // static get SIZES() {
+  //   return {
+  //     [Hamburger.SIZE_SMALL]: { price: 30, calories: 50 },
+  //     [Hamburger.SIZE_LARGE]: { price: 50, calories: 100 }
+  //   };
+  // }
 
-  static get STUFFING_CHEESE() { return 'STUFFING_CHEESE'; }
-  static get STUFFING_SALAD() { return 'STUFFING_SALAD'; }
-  static get STUFFING_MEAT() { return 'STUFFING_MEAT'; }
-  static get STUFFINGS() {
-    return {
-      [Hamburger.STUFFING_CHEESE]: { price: 15, calories: 20 },
-      [Hamburger.STUFFING_SALAD]: { price: 20, calories: 5 },
-      [Hamburger.STUFFING_MEAT]: { price: 35, calories: 15 }
-    };
-  }
+  // static get STUFFING_CHEESE() { return 'STUFFING_CHEESE'; }
+  // static get STUFFING_SALAD() { return 'STUFFING_SALAD'; }
+  // static get STUFFING_MEAT() { return 'STUFFING_MEAT'; }
+  // static get STUFFINGS() {
+  //   return {
+  //     [Hamburger.STUFFING_CHEESE]: { price: 15, calories: 20 },
+  //     [Hamburger.STUFFING_SALAD]: { price: 20, calories: 5 },
+  //     [Hamburger.STUFFING_MEAT]: { price: 35, calories: 15 }
+  //   };
+  // }
 
-  static get TOPPING_SPICE() { return 'TOPPING_SPICE'; }
-  static get TOPPING_SAUCE() { return 'TOPPING_SAUCE'; }
-  static get TOPPINGS() {
-    return {
-      [Hamburger.TOPPING_SPICE]: { price: 10, calories: 0 },
-      [Hamburger.TOPPING_SAUCE]: { price: 15, calories: 5 }
-    };
-  }
+  // static get TOPPING_SPICE() { return 'TOPPING_SPICE'; }
+  // static get TOPPING_SAUCE() { return 'TOPPING_SAUCE'; }
+  // static get TOPPINGS() {
+  //   return {
+  //     [Hamburger.TOPPING_SPICE]: { price: 10, calories: 0 },
+  //     [Hamburger.TOPPING_SAUCE]: { price: 15, calories: 5 }
+  //   };
+  // }
 }
+
+// Размеры, виды добавок и начинок объявите как статические поля класса.
+Hamburger.SIZE_SMALL = 'SIZE_SMALL';
+Hamburger.SIZE_LARGE = 'SIZE_LARGE';
+Hamburger.SIZES = {
+  [Hamburger.SIZE_SMALL]: { price: 30, calories: 50 },
+  [Hamburger.SIZE_LARGE]: { price: 50, calories: 100 }
+};
+
+Hamburger.STUFFING_CHEESE = 'STUFFING_CHEESE';
+Hamburger.STUFFING_SALAD = 'STUFFING_SALAD';
+Hamburger.STUFFING_MEAT = 'STUFFING_MEAT';
+Hamburger.STUFFINGS = {
+  [Hamburger.STUFFING_CHEESE]: { price: 15, calories: 20 },
+  [Hamburger.STUFFING_SALAD]: { price: 20, calories: 5 },
+  [Hamburger.STUFFING_MEAT]: { price: 35, calories: 15 }
+};
+
+Hamburger.TOPPING_SPICE = 'TOPPING_SPICE';
+Hamburger.TOPPING_SAUCE = 'TOPPING_SAUCE';
+Hamburger.TOPPINGS = {
+  [Hamburger.TOPPING_SPICE]: { price: 10, calories: 0 },
+  [Hamburger.TOPPING_SAUCE]: { price: 15, calories: 5 }
+};
 
 /* Вот как может выглядеть использование этого класса */
 
