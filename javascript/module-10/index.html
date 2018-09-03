@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JS-module-10-HW</title>
+</head>
+
+<body>
+    <h1 class="title">Модуль 10.<br>Домашнее задание</h2>
+        <h2 class="title__task">Добавить нового пользователя</h2>
+        <div class="container js-addUser">
+            <form class="search-form">
+                <input type="text" name="userName" placeholder="Enter name">
+                <input type="text" name="userAge" placeholder="Enter age">
+                <button class="mdc-btn js-submit" type="submit">Add</button>
+            </form>
+            <p class="result js-result"></p>
+        </div>
+        <h2 class="title__task">Получить данные по ID</h2>
+        <div class="container js-getUser">
+            <form class="search-form">
+                <input type="text" name="userID" placeholder="Enter user id">
+                <button class="mdc-btn js-submit" type="submit">Get</button>
+            </form>
+            <p class="result js-result"></p>
+        </div>
+        <h2 class="title__task">Обновить данные по ID</h2>
+        <div class="container js-updateUser">
+            <form class="search-form">
+                <input type="text" name="userID" placeholder="Enter user id">
+                <input type="text" name="userName" placeholder="Enter name">
+                <input type="text" name="userAge" placeholder="Enter age">
+                <button class="mdc-btn js-submit" type="submit">Update</button>
+            </form>
+            <p class="result js-result"></p>
+        </div>
+        <h2 class="title__task">Удалить данные по ID</h2>
+        <div class="container js-removeUser">
+            <form class="search-form">
+                <input type="text" name="userID" placeholder="Enter user id">
+                <button class="mdc-btn js-submit" type="submit">Remove</button>
+            </form>
+            <p class="result js-result"></p>
+        </div>
+        <h2 class="title__task">Весь список, целиком.</h2>
+        <div class="container js-getAll">
+            <form class="search-form">
+                <button class="mdc-btn js-submit" type="submit">Get all</button>
+            </form>
+            <p class="result js-result"></p>
+        </div>
+</body>
+<script src="index.js"></script>
+
+</html>
