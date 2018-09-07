@@ -1,0 +1,279 @@
+  .console {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    text-align: left;
+    min-width: 80%;
+    padding: 5px 20px;
+    background-color: aquamarine;
+    box-shadow: 2px 2px 8px 2px blue;
+    margin: 1vh auto;
+  }
+  
+  .title {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2vh;
+  }
+  
+  .title__task {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+  }
+  
+  .wrp-task,
+  .wrp-task-1,
+  .wrp-task-2,
+  .wrp-task-3,
+  .wrp-task-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    max-width: 60vw;
+    margin: auto;
+    margin-bottom: 2vh;
+    box-shadow: 2px 2px 8px 2px hsla(240, 100%, 50%, 0.6);
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+  }
+  
+  .wrp-task-2 {
+    flex-direction: column;
+  }
+  /* Дополнительное задание 1 */
+  
+  .item {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: left;
+    max-width: 40%;
+    padding: 1px 5px;
+    background-color: aquamarine;
+    box-shadow: 2px 2px 8px 2px blue;
+    margin: 8px auto;
+    list-style: none;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .name,
+  .count {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .count {
+    text-align: right;
+  }
+  /* Дополнительное задание 2 */
+  
+  .post {
+    width: 200px;
+    padding: 5px 5px;
+    /* background-color: aquamarine; */
+    box-shadow: 2px 2px 8px 2px blue;
+    margin: 10px;
+    box-sizing: border-box;
+    min-height: 200px;
+    position: relative;
+  }
+  
+  .container {
+    width: fit-content;
+    margin: 10px auto;
+    box-shadow: 2px 2px 8px 2px hsla(240, 100%, 50%, 0.6);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .text {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    text-align: left;
+  }
+  
+  .fav-icon {
+    position: absolute;
+    z-index: -1;
+    left: 50px;
+    top: 50px;
+  }
+  /* Дополнительное задание 2 */
+  
+  form {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 0 2px 2px rgba(#414141, 0.3);
+  }
+  
+  .results {
+    margin-top: 40px;
+  }
+  
+  .results li {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .results li::before {
+    display: inline-block;
+    content: "\2014";
+    margin-right: 4px;
+  }
+  
+  .results .success {
+    color: #4caf50;
+  }
+  
+  .results .error {
+    color: #f44336;
+  }
+  
+  input {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    margin: 10px auto;
+    padding: 2px 10px;
+  }
+  
+  .btn {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 5px auto;
+    padding: 5px;
+  }
+  
+  .shop {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .filters {
+    width: 14%;
+    box-shadow: 1px 1px 4px 1px hsla(240, 100%, 50%, 0.6);
+    box-sizing: border-box;
+    padding: 10px 5px;
+  }
+
+  form>section>ul>li {
+    list-style: none;
+  }
+  
+  .cartWasFilter {
+    width: 84%;
+    box-shadow: 1px 1px 4px 1px hsla(240, 100%, 50%, 0.6);
+    box-sizing: border-box;
+    padding: 0.5%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  button {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 5px 10px;
+    padding: 5px 10px;
+  }
+  
+  .cart {
+    box-shadow: 2px 2px 8px 2px hsla(240, 100%, 50%, 0.6);
+    width: 24%;
+    margin: 0.5%;
+    padding: 1% 2%;
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  .cart__title {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+  
+  .cart__img-wrap {
+    width: 96%;
+    margin-bottom: 2%;
+  }
+  
+  .cart__img-img {
+    width: 100%;
+  }
+  
+  .cart__descr {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    margin-bottom: 2%;
+  }
+  
+  .cart_options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+  }
+  
+  .cart__color {
+    min-width: 25%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    text-align: center;
+    padding: 2px;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    text-transform: lowercase;
+    text-shadow: 1px 1px 0px white;
+  }
+  
+  .cart__size,
+  .cart__release {
+    min-width: 20%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 2px;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    text-transform: lowercase;
+  }
+  
+  .cart__price {
+    width: 40%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 3px;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 2px 2px 8px 2px hsla(240, 100%, 50%, 0.4);
+    margin-left: auto;
+  }
+  
+  .cart__price:hover {
+    background-color: yellow;
+    transform: rotate( -30deg);
+    transition-property: transform, background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+  }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JS-module-11-Tasks</title>
+</head>
+
+<body>
+    <h1 class="title">Модуль 11</h1>
+    <h2 class="title__task">Дополнительное задание 1</h2>
+    <ul class="list">
+        <template id="listTemplate">
+        <li class="item">
+          <p class="name">{{name}}</p>
+          <span class="count">{{count}}</span>
+        </li>
+      </template>
+    </ul>
+
+    <h2 class="title__task">Дополнительное задание 2</h2>
+    <div class="container">
+    </div>
+        <template id="postTemplate">
+            <div class="post">
+                <h2 class="title">{{title}}</h2>
+                <p class="text">{{text}}</p>
+                {{#if isFav}}
+                <span class="fav-icon">
+                    <img src="https://image.flaticon.com/icons/svg/290/290413.svg" alt="favorit" width="100px">
+                </span>
+                {{/if}}
+            </div>
+        </template>
+
+    <h2 class="title__task">Дополнительное задание 3</h2>
+    <div class="container">
+        <div class="row">
+            <form acrion="#" class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="First name" id="first_name" type="text" class="validate">
+                        <label for="first_name"></label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input placeholder="Last Name" id="last_name" type="text" class="validate">
+                        <label for="last_name"></label>
+                    </div>
+                    <div class="col s12">
+                        <button class="btn waves-effect waves-light" id="submit-btn" type="submit" name="action">submit</button>
+                    </div>
+                </div>
+            </form>
+            <ul class="results col s12">
+            </ul>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+<script src="tasks.js"></script>
+
+</html>
