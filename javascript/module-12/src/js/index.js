@@ -50,7 +50,7 @@ const LOCALSTORAGE = (w => {
 })(window);
 
 const api = {
-    baseUrl: "http://api.linkpreview.net/",
+    baseUrl: "https://api.linkpreview.net/",
     myKey: "5bb09717109fa9d825897e9782df267d7e97eed9cc5b8",
     getData(nameURL) {
         return fetch(this.baseUrl + "?key=" + this.myKey + "&q=" + nameURL)

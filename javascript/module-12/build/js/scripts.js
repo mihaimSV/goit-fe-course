@@ -50,7 +50,7 @@ var LOCALSTORAGE = function (w) {
 }(window);
 
 var api = {
-    baseUrl: "http://api.linkpreview.net/",
+    baseUrl: "https://api.linkpreview.net/",
     myKey: "5bb09717109fa9d825897e9782df267d7e97eed9cc5b8",
     getData: function getData(nameURL) {
         return fetch(this.baseUrl + "?key=" + this.myKey + "&q=" + nameURL).then(function (response) {
